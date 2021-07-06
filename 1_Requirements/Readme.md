@@ -27,10 +27,13 @@ Bank Management System have few inbuilt features like:
 2000 BC	| The beganing of banking System	|free
 1397-1463 |	The modernization of the bank|	free
 2001-2021 |	The emergence of Bank Management System|	$5-$10
+
 ## Defining Our System
 ![image](https://user-images.githubusercontent.com/62846958/124657579-4f45e580-dec0-11eb-9bd5-2d7f7c6db06a.png)
+
 ## SWOT ANALYSIS
 ![Screenshot (40)](https://user-images.githubusercontent.com/62846958/124656766-3d177780-debf-11eb-9f7a-5f3d59ce2195.png)
+
 
 # 4W&#39;s and 1&#39;H
 
