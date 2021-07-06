@@ -10,6 +10,17 @@ This topic was chosen because it gives me an opportunity to implement and unders
 Bank Management System Features and Benefits
 In the recent years, computers are included in almost all kind of works and jobs everyone come across in the routine. The availability of the software’s for almost every process or every system has taken the world in its top-gear and fastens the day-to-day life. So, we have tried our best to develop the software program for the Bank Management System where all the tasks to manage the bank system are performed easily and efficiently. It manages all the transactions like new account entry, deposit as well as withdraw entry, transaction of money for various processes,accunt managment, managing bills cash or cheque, etc. Thus, above features of this software will save transaction time and therefore increase the efficiency of the system.
 
+## Explanation
+Bank Management System have few inbuilt features like:
+1. Create new accountUpdate information of existing account
+2. Removing existing account
+3. Check the detail of existing account
+4. List of all account
+5. Delete all account
+6. Open calculator
+7. Change login credentials
+8. Making a withdrawl
+
 ## Cost and Features and Timeline
 |Time	|Feature|	Cost
 |---|---|---|
@@ -19,7 +30,7 @@ In the recent years, computers are included in almost all kind of works and jobs
 ## Defining Our System
     -- TBD
 ## SWOT ANALYSIS
-![]()
+![Screenshot (40)](https://user-images.githubusercontent.com/62846958/124656766-3d177780-debf-11eb-9f7a-5f3d59ce2195.png)
 
 # 4W&#39;s and 1&#39;H
 
