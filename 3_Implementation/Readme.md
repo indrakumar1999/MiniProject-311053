@@ -3,7 +3,7 @@
 ## Folder Structure
 Folder        | description
 --------------| ----------------------------------------------
-`inc`         | All header files
-`src`         | Main source code for calculator
+`doxyfile`         | Doxygen files
+`main`         | Main source code for banking managemaent
 `test`        | All source code and data for testing purposes
 `build`       | Build output (Not included in git)
