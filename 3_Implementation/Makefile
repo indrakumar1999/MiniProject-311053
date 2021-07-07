@@ -1,65 +1,46 @@
-# Name of the project
-PROJECT_NAME = Calculator
+PROJ_NAME = bank
+TEST_PROJ_NAME = Test_$(PROJ_NAME)
 
-# Output directory
-BUILD = build
+BUILD_DIR = Build
 
-# All source code files
-SRC = project_main.c\
-src/calculator_operations.c
+SRC = accept.c deposit.c display.c search.c withdraw.c
 
-# All test source files
-TEST_SRC = src/calculator_operations.c\
-test/test_calculator_operations.c\
-unity/unity.c\
+TEST_SRC = testbank.c\
+unity/unity.c
 
-TEST_OUTPUT = $(BUILD)/Test_$(PROJECT_NAME).out
+INC = -Iunity
 
-# All include folders with header files
-INC	= -Iinc\
--Iunity\
+#To check if the OS is Windows or Linux and set the executable file extension and delete command accordingly
+ifdef OS
+   RM = rm -rf
+   FixPath = $(subst /,\,$1)
+   EXEC = exe
+else
+   ifeq ($(shell uname), Linux)
+      RM = del /q
+      FixPath = $1
+	  EXEC = out
+   endif
+endif
 
-#Library Inlcudes
-#if working with CUnit 
-#INCLUDE_LIBS = -lcunit
-INCLUDE_LIBS =
+# Makefile will not run target command if the name with file already exists. To override, use .PHONY
+.PHONY : all test run clean 
 
-# Project Output name
-PROJECT_OUTPUT = $(BUILD)/$(PROJECT_NAME).out
+all:$(BUILD_DIR)
+	gcc main.c $(SRC) $(INC) -o $(call FixPath,$(BUILD_DIR)/$(PROJ_NAME).$(EXEC))
 
-# Document files
-DOCUMENTATION_OUTPUT = documentation/html
+run: all
+	$(call FixPath,$(BUILD_DIR)/$(PROJ_NAME).$(EXEC))
 
-# Default target built
-$(PROJECT_NAME):all
+test: $(SRC) $(TEST_SRC)
+	gcc $^ $(INC) -o $(call FixPath,$(BUILD_DIR)/$(TEST_PROJ_NAME).$(EXEC))
+	$(call FixPath,$(BUILD_DIR)/$(TEST_PROJ_NAME).$(EXEC))
 
-# Run the target even if the matching name exists
-.PHONY: run clean test doc all
+$(BUILD_DIR):
+	mkdir $(BUILD_DIR)
 
-all: $(SRC) $(BUILD)
-	gcc $(SRC) $(INC) -o $(PROJECT_OUTPUT).out
-
-# Call `make run` to run the application
-run:$(PROJECT_NAME)
-	./$(PROJECT_OUTPUT).out
-
-# Document the code using Doxygen
-#doc:
-#	make -C ./documentation
-
-# Build and run the unit tests
-test:$(BUILD)
-	gcc $(TEST_SRC) $(INC) -o $(TEST_OUTPUT)
-	./$(TEST_OUTPUT)
-#Coverage
-coverageCheck:$(BUILD)
-	g++ -fprofile-arcs -ftest-coverage -fPIC -O0 $(TEST_SRC) $(INC) -o $(TEST_OUTPUT)
-	./$(TEST_OUTPUT)
-
-# Remove all the built files, invoke by `make clean`
 clean:
-	rm -rf $(BUILD) $(DOCUMENTATION_OUTPUT)
-
-# Create new build folder if not present
-$(BUILD):
-	mkdir build
+	$(RM) $(BUILD_DIR)/*
+	 
+	
+	
