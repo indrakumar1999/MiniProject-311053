@@ -1,4 +1,4 @@
- name: Dynamic code analysis
+name: Dynamic code analysis
 on:
   push:
     branches: [ main ]
