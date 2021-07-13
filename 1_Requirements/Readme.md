@@ -73,4 +73,4 @@ LLR1 |	Login System Admin |	Implemented
 LLR1 |	Login System Customer	|	Implemented
 LLR2 |	Account Management System	|Implemented
 LLR2 |	Withdrawl mechanism	|	Implemented
-LLR2 |	Calculator|	Implemented
+
