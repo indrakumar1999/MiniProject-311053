@@ -40,8 +40,24 @@ test: $(SRC) $(TEST_SRC)
 $(BUILD_DIR):
 	mkdir $(BUILD_DIR)
 
+coverage:
+	gcc -fprofile-arcs -ftest-coverage $(SRC) $(TEST) $(INC) -o $(call FixPath,test.$(EXEC))
+	./test.$(EXEC)
+	gcov -a test.c
+
+cppcheck:
+	cppcheck --enable=all $(SRC) main.c
+
+valgrind:
+	valgrind ./test.out
+
+
 clean:
-	$(RM) $(BUILD_DIR)/*
+	$(RM) *.$(EXEC)
+	$(RM) *.gcda
+	$(RM) *.gcno
+	$(RM) *.c.gcov
+
 	 
 	
 	
