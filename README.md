@@ -1,6 +1,6 @@
 # SDLC Activity Based Learning
 
-Visit [Pages for Report -optional](using github.io option)
+click url for Visit: 
 
 Build | Code Quality | Unity | [Git Inspector](using github.io option)
 ------|----------|-------|--------------
@@ -17,21 +17,16 @@ Folder             | Description
 
 ## Contributors List and Summary
 
-PS No. |  Name   |    Features    | Issuess Raised |Issues Resolved|No Test Cases|Test Case Pass
+SF ID. |  Name   |    Features    | Issuess Raised |Issues Resolved|No Test Cases|Test Case Pass
 -------|---------|----------------|----------------|---------------|-------------|--------------
-`ABC` | 12345678  | Feature A, B etc    | X No     | X No   |X No   |X No     
-`DEF` | 12345678  | Feature C, D etc    | X No     | X No   |X No   |X No     
+`311053` | Alavelli IndraKumar  | BanKing Management(Deposit, withdraw,et..)    | X No     | X No   |X 4   |X 4     
+   
 
 ## Challenges Faced and How Was It Overcome
 
-1. ABC
-2. BCD
-3. ...
-4. ...
+1.Updating and Deleting a file was overcame by using a temporary file to store data for some time.
 
 ## Learning Resources
-1. [markdownCheatsheet](https://github.com/adam-p/markdown-here/wiki/Markdown-Cheatsheet)
-2. [markdownBasics](https://guides.github.com/features/mastering-markdown/)
-3. [git inspector](https://github.com/ejwa/gitinspector.git)
-4. [github workflow](https://docs.github.com/en/actions/learn-github-action)
+1. tutorials point
+2. geeksforgeeks
 
