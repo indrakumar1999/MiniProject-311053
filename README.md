@@ -24,7 +24,8 @@ SF ID. |  Name   |    Features    | Issuess Raised |Issues Resolved|No Test Case
 
 ## Challenges Faced and How Was It Overcome
 
-1.Updating and Deleting a file was overcame by using a temporary file to store data for some time.
+1.I have faced issues= in file handling. so, I used strings
+2.Updating and Deleting a file was overcame by using a temporary file to store data for some time.
 
 ## Learning Resources
 1. tutorials point
