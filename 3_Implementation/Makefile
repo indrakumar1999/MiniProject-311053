@@ -28,7 +28,6 @@ endif
 
 all:$(BUILD_DIR)
 	gcc main.c $(SRC) $(INC) -o $(call FixPath,$(BUILD_DIR)/$(PROJ_NAME).$(EXEC))
-	
 
 run: all
 	$(call FixPath,$(BUILD_DIR)/$(PROJ_NAME).$(EXEC))
@@ -40,24 +39,8 @@ test: $(SRC) $(TEST_SRC)
 $(BUILD_DIR):
 	mkdir $(BUILD_DIR)
 
-coverage:
-	gcc -fprofile-arcs -ftest-coverage $(SRC) $(TEST) $(INC) -o $(call FixPath,test.$(EXEC))
-	./test.$(EXEC)
-	gcov -a test.c
-
-cppcheck:
-	cppcheck --enable=all $(SRC) main.c
-
-valgrind:
-	valgrind ./test.out
-
-
 clean:
-	$(RM) *.$(EXEC)
-	$(RM) *.gcda
-	$(RM) *.gcno
-	$(RM) *.c.gcov
-
+	$(RM) $(BUILD_DIR)/*
 	 
 	
 	
