@@ -1,44 +1,47 @@
 PROJ_NAME = bank
 TEST_PROJ_NAME = Test_$(PROJ_NAME)
 
-BUILD_DIR = Build
+PROJ_NAME = main
 
-SRC = accept.c deposit.c display.c search.c withdraw.c
+SRC = 
+src/accept.c\
+src/deposit.c\
+src/display.c\
+src/search.c\
+src/withdraw.c
 
-TEST_SRC = testbank.c\
+TEST = test.c\
 unity/unity.c
 
-INC = -Iunity
+BUILD_DIR = Build
 
-#To check if the OS is Windows or Linux and set the executable file extension and delete command accordingly
+INC = -Iinc\
+-Iunity
+
 ifdef OS
-   RM = rm -rf
+   RM = del /q
    FixPath = $(subst /,\,$1)
    EXEC = exe
 else
    ifeq ($(shell uname), Linux)
-      RM = del /q
+      RM = rm -rf
       FixPath = $1
 	  EXEC = out
    endif
 endif
 
 # Makefile will not run target command if the name with file already exists. To override, use .PHONY
-.PHONY : all test run clean 
+.PHONY : all test coverage run clean doc
 
-all:$(BUILD_DIR)
-	gcc main.c $(SRC) $(INC) -o $(call FixPath,$(BUILD_DIR)/$(PROJ_NAME).$(EXEC))
-	
+all:
+	gcc main.c $(SRC) $(INC) -o $(call FixPath,$(PROJ_NAME).$(EXEC))
 
 run: all
-	$(call FixPath,$(BUILD_DIR)/$(PROJ_NAME).$(EXEC))
+	./$(call FixPath,$(PROJ_NAME).$(EXEC))
 
-test: $(SRC) $(TEST_SRC)
-	gcc $^ $(INC) -o $(call FixPath,$(BUILD_DIR)/$(TEST_PROJ_NAME).$(EXEC))
-	$(call FixPath,$(BUILD_DIR)/$(TEST_PROJ_NAME).$(EXEC))
-
-$(BUILD_DIR):
-	mkdir $(BUILD_DIR)
+test: $(SRC) $(TEST)
+	gcc $^ $(INC) -o $(call FixPath,test.$(EXEC))
+	./test.$(EXEC)
 
 coverage:
 	gcc -fprofile-arcs -ftest-coverage $(SRC) $(TEST) $(INC) -o $(call FixPath,test.$(EXEC))
