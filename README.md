@@ -1,4 +1,7 @@
-# SDLC Activity Based Learning
+# WELCOME TO BANKING MANGEMENT SYSTEM
+
+![banking-management-system](https://user-images.githubusercontent.com/62846958/125443551-bc011807-2956-4990-bca0-565a49b4adeb.jpg)
+
 
 click url for Visit: 
 
