@@ -1,10 +1,15 @@
-# SDLC Activity Based Learning
+# WELCOME TO BANKING MANGEMENT SYSTEM
+
+![banking-management-system](https://user-images.githubusercontent.com/62846958/125443551-bc011807-2956-4990-bca0-565a49b4adeb.jpg)
+
 
 click url for Visit: 
 
-Build | Code Quality | Unity | [Git Inspector](using github.io option)
+Build | Code Quality | Unity | [Git Inspector](using github.io option) 
 ------|----------|-------|--------------
-[![BUILD](https://github.com/indrakumar1999/MiniProject-311053/actions/workflows/Build.yml/badge.svg)](https://github.com/indrakumar1999/MiniProject-311053/actions/workflows/Build.yml) | [![Cpp check](https://github.com/indrakumar1999/MiniProject-311053/actions/workflows/cppcheck.yml/badge.svg)](https://github.com/indrakumar1999/MiniProject-311053/actions/workflows/cppcheck.yml) [![Static Code Analysis](https://github.com/indrakumar1999/MiniProject-311053/actions/workflows/static.yml/badge.svg)](https://github.com/indrakumar1999/MiniProject-311053/actions/workflows/static.yml) [![Dynamic Valgrind](https://github.com/prithvisekhar/AppliedSDLC_Template/actions/workflows/CodeQuality_Dynamic.yml/badge.svg)](https://github.com/prithvisekhar/AppliedSDLC_Template/actions/workflows/CodeQuality_Dynamic.yml)| [![Unit Testing](https://github.com/indrakumar1999/MiniProject-311053/actions/workflows/unit_test.yml/badge.svg)](https://github.com/indrakumar1999/MiniProject-311053/actions/workflows/unit_test.yml)| [![Git Inspector](https://github.com/indrakumar1999/MiniProject-311053/actions/workflows/Git_Inspector.yml/badge.svg)](https://github.com/indrakumar1999/MiniProject-311053/actions/workflows/Git_Inspector.yml)
+[![BUILD](https://github.com/indrakumar1999/MiniProject-311053/actions/workflows/Build.yml/badge.svg)](https://github.com/indrakumar1999/MiniProject-311053/actions/workflows/Build.yml) | [![Cpp check](https://github.com/indrakumar1999/MiniProject-311053/actions/workflows/cppcheck.yml/badge.svg)](https://github.com/indrakumar1999/MiniProject-311053/actions/workflows/cppcheck.yml) [![Static Code Analysis](https://github.com/indrakumar1999/MiniProject-311053/actions/workflows/static.yml/badge.svg)](https://github.com/indrakumar1999/MiniProject-311053/actions/workflows/static.yml) [![Dynamic Valgrind](https://github.com/prithvisekhar/AppliedSDLC_Template/actions/workflows/CodeQuality_Dynamic.yml/badge.svg)](https://github.com/prithvisekhar/AppliedSDLC_Template/actions/workflows/CodeQuality_Dynamic.yml)| [![Unit Testing](https://github.com/indrakumar1999/MiniProject-311053/actions/workflows/unit_test.yml/badge.svg)](https://github.com/indrakumar1999/MiniProject-311053/actions/workflows/unit_test.yml)| [![Git Inspector](https://github.com/indrakumar1999/MiniProject-311053/actions/workflows/Git_Inspector.yml/badge.svg)](https://github.com/indrakumar1999/MiniProject-311053/actions/workflows/Git_Inspector.yml) | <a href="https://frontend.code-inspector.com/public/user/github/indrakumar1999">
+   <img src="https://code-inspector.com/public/badge/user/github/indrakumar1999?style=light" alt="code inspector badge" />
+</a>
 
 
 ## Folder Structure
@@ -19,12 +24,13 @@ Folder             | Description
 
 SF ID. |  Name   |    Features    | Issuess Raised |Issues Resolved|No Test Cases|Test Case Pass
 -------|---------|----------------|----------------|---------------|-------------|--------------
-`311053` | Alavelli IndraKumar  | BanKing Management(Deposit, withdraw,et..)    | X No     | X No   |X 4   |X 4     
+`311053` | Alavelli IndraKumar  | BanKing Management(Deposit, withdraw,et..)    |  No     |  No   | 4   | 4     
    
 
 ## Challenges Faced and How Was It Overcome
 
-1.I have faced issues= in file handling. so, I used strings
+1.I have faced issues in file handling. so, I used strings.
+
 2.Updating and Deleting a file was overcame by using a temporary file to store data for some time.
 
 ## Learning Resources
