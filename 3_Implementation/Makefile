@@ -39,7 +39,7 @@ test: $(SRC) $(TEST_SRC)
 $(BUILD_DIR):
 	mkdir $(BUILD_DIR)
 coverage:
-        gcc -fprofile-arcs -ftest-coverage $(SRC) $(TEST_SRC) $(INC) -o $(call FixPath,(TEST_PROJ_NAME).$(EXEC))
+        gcc main.c $(SRC) $(INC) -o $(call FixPath,(TEST_PROJ_NAME).$(EXEC))
 	./(TEST_PROJ_NAME).$(EXEC)
 	gcov -a (TEST_PROJ_NAME).c
 
