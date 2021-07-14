@@ -42,8 +42,5 @@ $(BUILD_DIR):
 clean:
 	$(RM) $(BUILD_DIR)/*
 	 
-<<<<<<< HEAD
 	
 	
-=======
->>>>>>> 8b3a367cbee25f582a2d3eed1dad63179c08e16f
