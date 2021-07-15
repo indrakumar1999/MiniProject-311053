@@ -35,10 +35,13 @@ run: all
 test: $(SRC) $(TEST_SRC)
 	gcc $^ $(INC) -o $(call FixPath,$(BUILD_DIR)/$(TEST_PROJ_NAME).$(EXEC))
 	$(call FixPath,$(BUILD_DIR)/$(TEST_PROJ_NAME).$(EXEC))
-	
+
 coverage:${PROJECT_NAME} $(BUILD_DIR)
 	gcc -fprofile-arcs -ftest-coverage $(SRC) $(TEST_SRC) $(INC) -o $(call FixPath,$(BUILD_DIR)/$(TEST_PROJ_NAME).$(EXEC))
 	$(call FixPath,$(BUILD_DIR)/$(TEST_PROJ_NAME).$(EXEC))
+
+valgrind:
+	valgrind $(BUILD_DIR)/$(TEST_PROJ_NAME).$(EXEC)
 
 $(BUILD_DIR):
 	mkdir $(BUILD_DIR)
